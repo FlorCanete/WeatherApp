@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#week-weather ul{
+    li {
+        background-color: #F7FDFE;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        max-width: 200px;
+        width: 100%;
+        font-weight: 600;
+        color: #71717A;
+
+        span:not([class]) {
+            color: #71717A;
+            font-weight: normal;
+        }
+    }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #333;
+  color: white;
+  transition: background-image 1s ease-in-out;
+}
+
+#weather-app {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+#week-weather ul{
+    gap: 20px;
+        
+    li {
+        max-width: 100%;
+    }
+}
+
+body.clear-day {
+  background: linear-gradient(-45deg, #87ceeb, #a0d8f7, #c1e0ff, #87ceeb);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+body.clear-night {
+  background: linear-gradient(-45deg, #001a33, #003366, #00264d, #001a33);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes rainPulse {
+  0%, 100% { background-color: #5a7d9a; }
+  50% { background-color: #7a99b7; }
+}
+
+body.rain-day {
+  background: linear-gradient(-45deg, #5a7d9a, #7a99b7, #5a7d9a);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite, rainPulse 4s ease-in-out infinite;
+}
+
+body.rain-night {
+  background: linear-gradient(-45deg, #2c3e50, #34495e, #2c3e50);
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease infinite, rainPulse 5s ease-in-out infinite;
+}
+
+body.cloudy-day {
+  background: linear-gradient(-45deg, #b0b0b0, #c8c8c8, #b0b0b0);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+}
+
+body.cloudy-night {
+  background: linear-gradient(-45deg, #4b4b4b, #5c5c5c, #4b4b4b);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+}
+
