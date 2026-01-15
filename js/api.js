@@ -1,4 +1,4 @@
-fetch("http://api.weatherapi.com/v1/forecast.json?key=2ec92f54761e4147ace223825252709&q=Buenos&Aires&days=3&aqi=no&alerts=no&lang=es")
+fetch("https://api.weatherapi.com/v1/forecast.json?key=2ec92f54761e4147ace223825252709&q=Buenos&Aires&days=3&aqi=no&alerts=no&lang=es")
 .then(
     response => response.json()
 )
