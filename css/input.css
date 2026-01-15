@@ -1,27 +1,27 @@
+@import "tailwindcss";
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #week-weather ul{
-    li {
-        background-color: #F7FDFE;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        max-width: 200px;
-        width: 100%;
-        font-weight: 600;
-        color: #71717A;
+  li {
+      background-color: #F7FDFE;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      max-width: 200px;
+      width: 100%;
+      font-weight: 600;
+      color: #71717A;
 
-        span:not([class]) {
-            color: #71717A;
-            font-weight: normal;
-        }
-    }
+      span:not([class]) {
+          color: #71717A;
+          font-weight: normal;
+      }
+  }
 }
 
 body {
@@ -41,11 +41,11 @@ body {
 }
 
 #week-weather ul{
-    gap: 20px;
-        
-    li {
-        max-width: 100%;
-    }
+  gap: 20px;
+
+  li {
+      max-width: 100%;
+  }
 }
 
 body.clear-day {

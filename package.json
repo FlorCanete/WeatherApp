@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
+  },
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i css/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorCanete/WeatherApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlorCanete/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/FlorCanete/WeatherApp#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18"
+  }
+}

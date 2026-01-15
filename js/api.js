@@ -18,10 +18,8 @@ fetch("https://api.weatherapi.com/v1/forecast.json?key=2ec92f54761e4147ace223825
                 default: return isDay ? 'clear-day' : 'clear-night';
             }
         }
-        data.forecast.forecastday.forEach(days => {
-    console.log(days.date); // ¿qué fechas están llegando?
-});
-        const bgClass = getBackgroundClass(conditionCode, isDay);
+
+        const bgClass = "min-h-screen w-full " +  getBackgroundClass(conditionCode, isDay);
         document.body.className = bgClass;
 
         let todayWeather = document.querySelector('#today-weather-info');
@@ -59,6 +57,7 @@ fetch("https://api.weatherapi.com/v1/forecast.json?key=2ec92f54761e4147ace223825
 
         data.forecast.forecastday.forEach(days => {
             const li = document.createElement('li');
+            li.className = 'hover:scale-105 transition-transform duration-300 ease-in-out bg-white/30 backdrop-blur-sm rounded-lg flex flex-col items-center gap-2 p-4';
             const weekDays = new Date(days.date);
 
             let date = weekDays.toLocaleDateString("es-ES", formatDate).replace(/^([a-z])/, m => m.toUpperCase()).replace('.','')
@@ -97,7 +96,7 @@ fetch("https://api.weatherapi.com/v1/forecast.json?key=2ec92f54761e4147ace223825
 
             const createTemperatureParagrapht = (maxValue,minValue, classname, label='', ) => {
                 const p = document.createElement('p');
-                p.className = classname;    
+                p.className = classname;
 
                 const maxSpan = document.createElement('span');
                 maxSpan.className = 'text-red-700 font-bold';
